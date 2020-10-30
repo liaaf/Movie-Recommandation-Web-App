@@ -1,0 +1,44 @@
+extends layout-alt
+
+block main
+  // Banner
+  section#banner
+    h2 DragonEvents
+    p A website for sharing and seeing any events going near the Drexel University Campus.
+    br
+    br
+    if session.user
+      p Welcome back, #{session.user.firstName} #{session.user.lastName}
+      ul.actions
+        li
+          a.button.special.big(href='events') View Events
+    else
+      p To be part of DragonEvents:
+      ul.actions
+        li
+          a.button.special.big(href='/login') Login
+  // Three
+  section#three.wrapper.style1
+    .container
+      header.major.special
+        h2 Featured Events
+        p Events hosted by business users
+      .feature-grid
+          each event,event_id in events
+            .feature
+              .image.rounded
+                img(src='img/logo.jpg', alt='')
+              .content
+                header
+                    a(href='/view/' + event_id)
+                      h4  #{event.name}
+                    p #{event.location}
+                    p #{event.start_date} #{event.start_time} ~ #{event.end_date} #{event.end_time}
+                    p #{event.description}
+  // Four
+  section#four.wrapper.style3.special
+    .container
+      header.map
+        h2 Drexel University Campus Map
+        .gmap.clear
+          iframe(src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12233.277311052874!2d-75.19080240688479!3d39.95661269999998!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xef32de4043c30f0!2sDrexel+University!5e0!3m2!1sen!2sus!4v1519667932936', width='100%', height='400', frameborder='0', style='border:0', allowfullscreen='')

@@ -1,0 +1,60 @@
+doctype html
+html
+  head
+    title DragonEvents
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='../css/main.css')
+  body
+    // Header
+    header#header
+      h1
+        strong
+          a(href='/') DragonEvents
+      nav#nav
+        ul
+          li
+            a(href='/') Home
+          li
+            a(href='/about') About Us
+          li
+            a(href='/events') Events
+          li
+            a(href='/login') Login
+    a.navPanelToggle(href='#menu')
+      span.fa.fa-bars
+    // Main
+    section#main.wrapper
+      .container
+        header.major.special
+          h2  Login 
+        p(align='center') Please login using a verified email address and password. 
+        form#loginForm
+          div#form
+            input(name='email', id='email', type='email', placeholder='User Email')
+            input(name='password', id='password', type='password', placeholder='Password')
+            button Login
+            p
+              br
+              | Don't have an account? 
+              a(href='/register') Register
+              |  for one!
+    // Footer
+    footer#footer
+      .container
+        ul.copyright
+          li © Untitled
+          li
+            | Design: 
+            a(href='http://templated.co') TEMPLATED
+          li
+            | Images: 
+            a(href='http://unsplash.com') Unsplash
+    // Scripts
+    script(src='../js/jquery.min.js')
+    script(src='../js/skel.min.js')
+    script(src='../js/util.js')
+    script(src='../js/main.js')
+    script(src='../js/gmap.js')
+    script(src='../js/jquery.validate.min.js')
+    script(src='../js/login.js')

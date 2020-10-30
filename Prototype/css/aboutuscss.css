@@ -1,0 +1,73 @@
+/*********************
+   Header Style
+*********************/
+body{
+    font-family: cambria;
+    background-image: url(../img/background3.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 108%;
+}
+
+#container{
+    background-color: white;
+    width: 960px;
+    height: auto;
+    margin: 0px auto;
+    padding: 0 15px 15px;}
+
+#container header{
+    padding: 0 0.5em;
+    height: 90px;}
+
+#container h2{
+    font-family: cambria;
+    margin: 0.5em
+}
+
+
+/*********************
+   Nav Styles
+*********************/
+header nav{
+    float: left;}
+
+header nav ul{
+    margin: 0;
+    padding: 0;
+    font-family: cambria;}
+
+header nav ul li{
+    float: left;
+    padding: 0em 0 0em 1.3em;}
+
+header nav ul li a, 
+header nav ul li a:visited{
+    font-size: 1em;
+    color: #4A4A4A;
+    text-decoration: none;}
+
+header nav ul li a.active, 
+header nav ul li a:focus, 
+header nav ul li a:hover{
+    color: green;}
+
+li{
+    display: inline;
+    margin: 12px;}
+
+/*********************
+   About Us
+*********************/
+#about {
+    font-family: cambria;
+    align-content: center;
+    margin-top: 12em;
+    margin-left: 2em;
+}
+
+#about p {
+    font-family: cambria;
+    font-size: 1em;
+}
+
+

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+
+<html>
+<head>
+	
+	<title>Movie Info</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+	<script>
+    function register_user() {
+        var email = $('#email').val();
+        var password = $('#pass').val();
+        
+        var URL = "./submit_user";
+        var stuff = {
+            email: email,
+            password: password,
+        };
+        
+        $.ajax({
+			type: "POST",
+			url: URL,
+			dataType: "text",
+			data: stuff,
+			success: function(msg) {
+				 $("#response").html(msg);
+				}, error: function(jgXHR, textStatus, errorThrown) {
+				document.getElementById("response").innerHTML = "Error: " + errorThrown;
+			}
+		});
+    }
+
+	function add_movie() {
+		var movie_id = $('#movie_id').val();
+		alert('Adding fav movie with id');
+	}
+
+	function loggedin() {
+        $.ajax({
+			type: "POST",
+			url: "./loggedin",
+			dataType: "text",
+			data: {},
+			success: function(msg) {
+				 $("#loggedin").html(msg);
+				},
+			error: function(jgXHR, textStatus, errorThrown) {
+				document.getElementById("loggedin").innerHTML = "Error: " + errorThrown;
+			}
+		});
+	}
+
+	function login() {
+        var email = $('#email_input').val();
+        var password = $('#pass_input').val();
+		alert('Logging in with ', email, 'and password ', password);
+        var stuff = {
+            email: email,
+            password: password,
+        };
+
+        $.ajax({
+			type: "POST",
+			url: "./login",
+			dataType: "text",
+			data: stuff,
+			success: function(msg) {
+				 $("#response").html(msg);
+				},
+			error: function(jgXHR, textStatus, errorThrown) {
+				document.getElementById("response").innerHTML = "Error: " + errorThrown;
+			}
+		});
+	}
+		
+    </script>
+
+</head>
+
+<body>
+	<script>loggedin()</script>
+    <p>Register an account:</p>
+    Email: <input type=text id=email>
+    Password: <input type=password id=pass>
+    <input type=button onclick="register_user()" value="Register"><br><br>
+	<p>Login</p>
+    Email: <input type=text id=email_input>
+    Password: <input type=password id=pass_input>
+    <input type=button onclick="login()" value="Log in"><br><br>
+	<div id="response"></div>
+	<div id="loggedin"></div>
+</body>
+</html>

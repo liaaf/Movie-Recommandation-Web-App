@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<title>MovieME</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="../css/main.css" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<h1><strong><a href="../movie.html">MovieME</a></strong></h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="../movie.html">Home</a></li>
+                        <li><a href="./login.html">Login</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+        
+    <!-- Main-->
+    <section id="main" class="wrapper">
+      <div class="container">
+        <header class="major special">
+          <h2> Registration  </h2>
+        </header>
+            <div id="register">
+              <p>Email: <input type="email" id="email" placeholder="Email">
+              </p>
+              <p>Password: <input type="password" id="password" placeholder="Password">
+              </p>
+              <p>Confirm password:
+                <input id="confirm_password" type="password" placeholder="Confirm Password">
+              </p>
+              <p>Username:
+                <input type="text" id="username" placeholder="Username">
+              </p>
+              <button onclick="register_user()">Submit</button>
+            </div>
+        <p id="error_response"></p>
+      </div>
+    </section>
+
+<!-- Scripts -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/skel.min.js"></script>
+    <script src="../js/util.js"></script>
+    <script src="../js/main.js"></script> 
+    <script src="../js/accounts.js"></script>
+    
+  </body>
+</html>

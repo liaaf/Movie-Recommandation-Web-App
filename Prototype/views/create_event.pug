@@ -1,0 +1,35 @@
+extends layout
+
+block content-title
+  h2 Event Submission
+
+block content
+  form#eventForm(style='text-align: center;')
+    p Event Title
+      br
+      input#name(name='name', size='35', maxlength='75')
+      br
+    p Description
+      br
+      input#description(name='description', size='50', style='height:100px')
+    br
+    p Start Date
+      input#start_date(name='start_date', type='date', style='margin-right: 30px')
+      | Start Time
+      input#start_time(name='start_time', type='time')
+      br
+    p End Date
+      input#end_date(name='end_date', type='date', style='margin-right: 30px')
+      | End Time
+      input#end_time(name='end_time', type='time')
+      br
+    p Location
+      br
+      input#location(name='location', size='35')
+      br
+      br
+    button(type='submit') Submit
+
+block append scripts
+    script(src='../js/jquery.validate.min.js')
+    script(src='../js/submit_event.js')

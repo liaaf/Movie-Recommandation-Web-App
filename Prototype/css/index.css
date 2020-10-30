@@ -1,0 +1,137 @@
+/*********************
+   Header Style
+*********************/
+body{
+    background-image: url("../img/stringio.jpg"), linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25));
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#container{
+    background-color: white;
+    width: 960px;
+    margin: 0px auto;
+    padding: 0 15px;}
+
+#container header{
+    font-family: cambria;
+    background-color: white;
+    padding: 0 0 11em;
+    height: 90px;}
+}
+
+
+/*********************
+   Nav Styles
+*********************/
+header nav{
+    float: right;}
+
+header nav ul{
+    margin: 0;
+    padding: 0;
+    font-family: cambria;}
+
+header nav ul li{
+    float: left;
+    padding: 0em 0 0em 1.3em;}
+
+header nav ul li a, 
+header nav ul li a:visited{
+    font-size: 1em;
+    color: #4A4A4A;
+    text-decoration: none;}
+
+header nav ul li a.active, 
+header nav ul li a:focus, 
+header nav ul li a:hover{
+    color: green;}
+
+li{
+    display: inline;
+    margin: 10px;}
+
+/*********************
+   Main Page content
+*********************/
+#MainContent{
+    background-color: white;
+    padding-bottom: 11em;
+    padding-left: 2em;
+}
+
+#MainPage{
+    padding-bottom: 15em;
+}
+
+#MainEvents
+{
+    float: left;
+    margin: 10px;
+    padding: 5px 40px 
+}
+
+/*********************
+   Events
+*********************/
+#MainContent #EventPage
+{
+    background-color: white;
+    padding-bottom: 22em;
+}
+
+#filter
+{
+    background-color: white;
+    float: none;
+    padding: 10px;
+    margin-top: 1em;
+}
+
+#Events
+{
+    float: left;
+    margin: 10px;
+    padding: 10px;
+}
+
+#EventContainer
+{
+    float: none;
+    width: 500px;
+}
+
+
+/*********************
+   About Us
+*********************/
+#about {
+    font-family: cambria;
+    align-content: center;
+}
+
+#about p {
+    font-family: cambria;
+    font-size: 1em;
+}
+
+
+
+/*********************
+   Log in
+*********************/
+.loginPage p{
+    margin: 1.5em;
+}
+
+#form{
+    position: relative;
+    z-index: 1;
+    background: #ffffff;
+    width: 175px;
+    margin: 0 auto 10px;
+    text-align: center;
+    padding-bottom: 7em;
+}

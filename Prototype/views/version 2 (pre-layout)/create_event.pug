@@ -1,0 +1,88 @@
+doctype html
+html
+  head
+    title DragonEvents
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='../css/main.css')
+  body
+    // Header
+    header#header
+      h1
+        strong
+          a(href='/') DragonEvents
+      nav#nav
+        ul
+          li
+            a(href='/') Home
+          li
+            a(href='/about') About Us
+          li
+            a(href='/events') Events
+          li
+            if user != null
+                a(href='/') #{users.email}
+            else
+                a(href='/login') Login
+    a.navPanelToggle(href='#menu')
+      span.fa.fa-bars
+    // Main
+    section#main.wrapper
+      .container
+        header.major.special
+          h2 Event Submission
+        form#eventForm(style='text-align: center;')
+          p
+            | Event Title: 
+            br
+            input#name(name='name', size='35', maxlength='75')
+            br
+          p
+            | Description: 
+            br
+            input#description(name='description', size='50', style='height:100px')
+          br
+          p
+            | Start Date : 
+            input#start_date(name='start_date', type='date', style='margin-right: 30px')
+            |                     Start Time   : 
+            input#end_date(name='start_time', type='time')
+            br
+          p
+            | End Date : 
+            input#start_date(name='end_date', type='date', style='margin-right: 30px')
+            |                     End Time   : 
+            input#end_date(name='end_time', type='time')
+            br
+          p
+            | Location   :
+            br
+            input#location(name='location', size='35')
+            br
+          p
+            | Event Type :
+            br
+            input#event_type(name='event_type', size='35')
+            br
+            br
+          button(type='submit') Submit
+    // Footer
+    footer#footer
+      .container
+        ul.copyright
+          li © Untitled
+          li
+            | Design: 
+            a(href='http://templated.co') TEMPLATED
+          li
+            | Images: 
+            a(href='http://unsplash.com') Unsplash
+    // Scripts
+    script(src='../js/jquery.min.js')
+    script(src='../js/skel.min.js')
+    script(src='../js/util.js')
+    script(src='../js/main.js')
+    script(src='../js/gmap.js')
+    script(src='https://code.jquery.com/jquery-3.3.1.js')
+    script(src='https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js')
+    script(src='../js/submit_event.js')

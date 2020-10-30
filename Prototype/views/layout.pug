@@ -1,0 +1,63 @@
+//- layout.pug
+doctype html
+html
+  head
+    title DragonEvents
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='/css/main.css')
+  body
+    // Header
+    header#header
+      h1
+        strong
+          a(href='/') DragonEvents
+      nav#nav
+        ul
+          li
+            a(href='/') Home
+          li
+            a(href='/about') About Us
+          li
+            a(href='/events') Events
+          if session.user
+            li
+              a(href='/logout') Logout
+            li
+              p Hello, #{session.user.firstName} #{session.user.lastName}
+          else
+            li
+              a(href='/login') Login
+    a.navPanelToggle(href='#menu')
+      span.fa.fa-bars
+    // Main
+    section#main.wrapper
+      .container
+        header.major.special
+          block content-title
+        block content
+    // Footer
+    footer#footer
+      .container
+        ul.icons
+          li
+            a.icon.fa-facebook(href='#')
+          li
+            a.icon.fa-twitter(href='#')
+          li
+            a.icon.fa-instagram(href='#')
+        ul.copyright
+          li © Untitled
+          li
+            | Design:
+            a(href='http://templated.co') TEMPLATED
+          li
+            | Images:
+            a(href='http://unsplash.com') Unsplash
+    block scripts
+      // Scripts
+      script(src='/js/jquery.min.js')
+      script(src='/js/skel.min.js')
+      script(src='/js/util.js')
+      script(src='/js/main.js')
+      script(src='/js/gmap.js')

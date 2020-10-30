@@ -1,0 +1,18 @@
+extends layout
+
+block content-title
+ h2  Login
+
+block content
+  p(align='center') Please login using a verified email address and password.
+  form#loginForm
+    div#form
+      input(name='email', id='email', type='email', placeholder='User Email')
+      input(name='password', id='password', type='password', placeholder='Password')
+      button Login
+      br
+      p Don't have an account? #[a(href='/register') Register] for one!
+
+block append scripts
+  script(src='../js/jquery.validate.min.js')
+  script(src='../js/login.js')

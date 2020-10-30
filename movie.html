@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<!--
+	Spatial by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>MovieME</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="./css/main.css" />
+	</head>
+	<body onload="login_status()">
+
+		<!-- Header -->
+			<header id="header">
+				<h1><strong><a href="movie.html">MovieME</a></strong></h1>
+				<nav id="nav">
+					<ul id="menu">
+						<li><a href="movie.html">Home</a></li>
+                        <li id="login"><a href="./templates/login.html">Login</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="container">
+					<header class="major special"></header>
+                    
+                    <div id="movies">
+                        <div id="mylist"></div>
+                        
+                        <form>
+                            
+                        <h4> Filter: </h4>
+                            
+                        <select name = "dropdown" id ="d">
+                        <option value = "0" selected>Filter</option>
+                        <option value = "1">Now Playing</option>
+                        <option value = "2">Year (Enter Below) </option>
+                        <option value = "3">Keyword (Enter Below)</option>
+                        <option value = "4">Language (Enter Below)</option>
+                        <option value = "5">Actor (Enter Below)</option>
+                        <option value = "6">Genre (Enter Below)</option>
+                        </select>
+                            
+                        <input type=text id=info placeholder="Enter">
+                        <br>
+                        <input type=button onclick="getMovie()" value="Get movie info"><br><br>
+                        </form>
+                        <div id="response"></div><br>
+                    </div>
+                </div>
+        </section>
+
+
+		<!-- Scripts -->
+			<script src="./js/jquery.min.js"></script>
+			<script src="./js/skel.min.js"></script>
+			<script src="./js/util.js"></script>
+			<script src="./js/main.js"></script>
+			<script src="./js/movie.js"></script>
+			<script src="./js/accounts.js"></script>
+
+	</body>
+</html>

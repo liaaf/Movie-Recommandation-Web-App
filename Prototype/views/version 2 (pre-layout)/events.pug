@@ -1,0 +1,82 @@
+doctype html
+//
+  Spatial by TEMPLATED
+  templated.co @templatedco
+  Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+html
+  head
+    title DragonEvents
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='../css/main.css')
+  body
+    // Header
+    header#header
+      h1
+        strong
+          a(href='/') DragonEvents
+      nav#nav
+        ul
+          li
+            a(href='/') Home
+          li
+            a(href='/about') About Us
+          li
+            a(href='/events') Events
+          li
+            if user != null
+                a(href='/') #{users.email}
+            else
+                a(href='/login') Login
+    a.navPanelToggle(href='#menu')
+      span.fa.fa-bars
+    // Main
+    section#main.wrapper
+      .container
+        header.major.special
+          h2 Events
+          section#Submit
+            a.button.special.big(href='/create_event') Submit Events
+        section#filter
+          h4 Filter:
+          input#name_input(placeholder='Event Name')
+          input#start_date(placeholder='Start Date', type='date')
+          input#start_time(placeholder='Start Time', type='time')
+          ul
+            li
+              input.tag(type='checkbox')
+              | Free
+            li
+              input.tag(type='checkbox')
+              | Paid
+            li
+              input.tag(type='checkbox')
+              | Music
+            li
+              input.tag(type='checkbox')
+              | Food
+        #EventList
+          each event, event_id in events
+            section#Events
+                a(href="view/" + event_id)
+                    h3 #{event.name}
+                p #{event.location}
+                p #{event.description}
+                p #{event.start_date} #{event.start_time}
+                p #{event.end_date} #{event.end_time}
+    // Footer
+    footer#footer
+      .container
+        ul.copyright
+          li © Untitled
+          li
+            | Design: 
+            a(href='http://templated.co') TEMPLATED
+          li
+            | Images: 
+            a(href='http://unsplash.com') Unsplash
+    // Scripts
+    script(src='../js/jquery.min.js')
+    script(src='../js/skel.min.js')
+    script(src='../js/util.js')
+    script(src='../js/main.js')

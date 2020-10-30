@@ -1,0 +1,55 @@
+doctype html
+head
+  meta(charset='utf-8')
+  title DragonEvents
+  link(rel='stylesheet', type='text/css', href='../css/EventStyle.css')
+// Page Container
+#container
+  // Header
+  header
+    // Logo
+    #logo
+      a(href='/')
+        img(src='../img/DragonEventsLogo.JPG', alt='DragonEvents Logo', height='150', width='200')
+      h2 Welcome to DragonEvents!
+    // Navigation
+    nav
+      ul.nav
+        li
+          a(href='/') Home
+        li
+          a(href='/Events') Events
+        li
+          a(href='/about') About us
+        li
+          a(href='/login') Log in
+  // Main Content
+  #MainContent
+    // Feature
+    section#Submit
+      a(href='/create_event')
+        img(src='../img/submit_event.jpg', height='50', width='200')
+    section#filter
+      input#name_input(placeholder='Event Name')
+      input#start_date(placeholder='Start Date', type='date')
+      input#end_date(placeholder='End Date', type='date')
+      ul
+        li
+          input.tag(type='checkbox')
+          | Free
+        li
+          input.tag(type='checkbox')
+          | Paid
+        li
+          input.tag(type='checkbox')
+          | Music
+        li
+          input.tag(type='checkbox')
+          | Food
+    #EventList
+      each event in events
+        section#Events
+          h3 #{event.name}
+          p #{event.desc}
+          p #{event.start}
+          p #{event.end}

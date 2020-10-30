@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+		<script src='https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js'></script>
+		<script src='../js/submit_event.js'></script>
+	</head>
+	<body>
+        <h1> DragonEvent Submission</h1>
+		<form id='eventForm'>
+        <p>Event Title:</p><input id='name' name='name' size="35" maxlength="75"/ ><br>
+        <p>Description:</p><input id='description' name='description' size="50" style="height:100px"/><br>
+        <p>Start Date : <input id='start_date' name='start_date' type="date" style="margin-right: 30px"/>
+            End Date   : <input id='end_date' name='end_date' type="date"/></p>
+        <p>Location   :</p><input id='location' name='location' size="35"/><br>
+        <p>Event Type :</p><input id='event_type' name='event_type' size="35"/><br><br>
+        <button type="submit">Submit</button>
+		</form>
+    </body>
+</html>
