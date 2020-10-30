@@ -1,0 +1,59 @@
+doctype html
+//
+  Spatial by TEMPLATED
+  templated.co @templatedco
+  Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+html
+  head
+    title DragonEvents
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='../css/main.css')
+  body
+    // Header
+    header#header
+      h1
+        strong
+          a(href='/') DragonEvents
+      nav#nav
+        ul
+          li
+            a(href='/') Home
+          li
+            a(href='/about') About Us
+          li
+            a(href='/events') Events
+          li
+            if user != null
+                a(href='/') #{users.email}
+            else
+                a(href='/login') Login
+    a.navPanelToggle(href='#menu')
+      span.fa.fa-bars
+    // Main
+    section#main.wrapper
+      .container
+        header.major.special
+            h2 #{event.name}
+            p 
+            p Start: #{event.start_date} #{event.start_time}
+            p End: #{event.end_date} #{event.end_time}
+            br
+            p Location: #{event.location}
+            p #{event.description}
+    // Footer
+    footer#footer
+      .container
+        ul.copyright
+          li © Untitled
+          li
+            | Design: 
+            a(href='http://templated.co') TEMPLATED
+          li
+            | Images: 
+            a(href='http://unsplash.com') Unsplash
+    // Scripts
+    script(src='../js/jquery.min.js')
+    script(src='../js/skel.min.js')
+    script(src='../js/util.js')
+    script(src='../js/main.js')

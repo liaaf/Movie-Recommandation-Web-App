@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h2 #{event.name}
+  p Start: #{event.start_date} #{event.start_time}
+  p End: #{event.end_date} #{event.end_time}
+  br
+  p Location: #{event.location}
+  p #{event.description}
